@@ -1,22 +1,30 @@
-import { TextInput } from "react-native";
-import { Text } from "react-native";
-import React from "react";
-import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import React from 'react';
+import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
+      <ScrollView contentContainerStyle={{
+      backgroundColor: "#f0f0f1",
       padding: 10,
-      position: 'relative',
+      position: "relative",
       flex: 1
-    }}><Text style={styles.JQKOILKC}>{"Username"}</Text><TextInput style={styles.SEFSGqCJ}></TextInput><Text style={styles.STHnIono}>{"Password"}</Text><TextInput style={styles.qPsiuHbc}></TextInput><Text style={styles.iDSeEgma}>{"SignIn"}</Text></ScrollView>
+    }}>
+        <Text style={styles.JQKOILKC}>{"Username"}</Text>
+        <TextInput style={styles.SEFSGqCJ}></TextInput>
+        <Text style={styles.STHnIono}>{"Password"}</Text>
+        <TextInput style={styles.qPsiuHbc}></TextInput>
+        <TouchableOpacity style={styles.iDSeEgma} onPress={() => navigation.navigate('About the App Screen')}>
+          <Text>{"SignIn"}</Text>
+        </TouchableOpacity>
+      </ScrollView>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%'
+    height: "100%"
   },
   JQKOILKC: {
     width: 70,
