@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
+import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -15,7 +15,7 @@ const Login = () => {
         <TextInput style={styles.SEFSGqCJ}></TextInput>
         <Text style={styles.STHnIono}>{"Password"}</Text>
         <TextInput style={styles.qPsiuHbc}></TextInput>
-        <TouchableOpacity style={styles.iDSeEgma} onPress={() => navigation.navigate('About the App Screen')}>
+        <TouchableOpacity style={styles.iDSeEgma} onPress={() => navigation.navigate("AboutTheAppScreen")}>
           <Text>{"SignIn"}</Text>
         </TouchableOpacity>
       </ScrollView>
