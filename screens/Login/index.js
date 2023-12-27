@@ -1,7 +1,7 @@
 import { Pressable } from "react-native";
 import { View } from "react-native";
 import React from "react";
-import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
@@ -17,10 +17,15 @@ const Login = () => {
         <TextInput style={styles.SEFSGqCJ}></TextInput>
         <Text style={styles.STHnIono}>{"Password"}</Text>
         <TextInput style={styles.qPsiuHbc}></TextInput>
-        <TouchableOpacity style={styles.iDSeEgma} onPress={() => navigation.navigate("AboutTheAppScreen")}>
-          
-        </TouchableOpacity>
-      <Pressable><View style={styles.XgaVnvrP}><Text style={styles.AyVsnhGR}>{"Sign In"}</Text></View></Pressable></ScrollView>
+
+        <Pressable onPress={() => {
+        navigation.navigate("AboutTheAppScreen", {});
+      }}>
+          <View style={styles.XgaVnvrP}>
+            <Text style={styles.AyVsnhGR}>{"Sign In"}</Text>
+          </View>
+        </Pressable>
+      </ScrollView>
     </SafeAreaView>;
 };
 
