@@ -1,3 +1,5 @@
+import { Pressable } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import { StyleSheet, Text, TextInput, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -16,9 +18,9 @@ const Login = () => {
         <Text style={styles.STHnIono}>{"Password"}</Text>
         <TextInput style={styles.qPsiuHbc}></TextInput>
         <TouchableOpacity style={styles.iDSeEgma} onPress={() => navigation.navigate("AboutTheAppScreen")}>
-          <Text>{"SignIn"}</Text>
+          
         </TouchableOpacity>
-      </ScrollView>
+      <Pressable><View style={styles.XgaVnvrP}><Text style={styles.AyVsnhGR}>{"Sign In"}</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -73,6 +75,23 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 113,
     top: 315
+  },
+  XgaVnvrP: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#E4E4E4",
+    borderRadius: 0,
+    color: "#777777",
+    position: "absolute",
+    left: 78,
+    top: 346
+  },
+  AyVsnhGR: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default Login;
